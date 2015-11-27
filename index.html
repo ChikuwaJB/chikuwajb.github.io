@@ -55,11 +55,11 @@ a {
 	var data_array;
 	var ig=0;
 	var len=0;
-function hoge(url,id,i){
+function hoge(url,id){
 
 $.getJSON("http://repo.chikuwajb.cf/dp/packages/" + url + ".json", function(data) {
 
-      		$('tbody').prepend('<tr><td>'+i+'</td><td><a href="http://repo.chikuwajb.cf/dp/?p='+id+'">'+data.name+"</a></td><tr>");
+      		$('tbody').prepend('<tr><td>#</td><td><a href="http://repo.chikuwajb.cf/dp/?p='+id+'">'+data.name+"</a></td><tr>");
 
       	});
 }
