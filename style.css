@@ -1,0 +1,86 @@
+@font-face{
+    font-family: "mitimasu";
+    src: url("mitimasu-s.woff") format('woff'),url("mitimasu-s.ttf") format('truetype');
+}
+body{
+    -webkit-font-smoothing: antialiased;
+    font-family: 'mitimasu',Quicksand, 'Noto Sans Japanese', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d28abecc24cb382f3c3114aec59e3d25);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+
+h1,h2{
+    font-weight: 100;
+    font-size: 3em;
+}
+h1{
+    text-align: center;
+}
+p{
+    margin-left: 15px;
+    font-size: 1.5em;
+}
+a{
+    color: #fff;
+}
+.loader-text{
+    position: absolute;
+    font-weight: 100;
+    font-size: 3em;
+    width: 100%;
+    text-align:center;
+    top: 50%;
+}
+.loader {
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    border: 0.8rem solid rgba(255, 255, 255, 0.2);
+    border-top-color: white;
+    -webkit-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+}
+.loader-w{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,1);
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}

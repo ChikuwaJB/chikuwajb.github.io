@@ -1,115 +1,43 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-	<title>Chikuwa</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="CydiaIcon.png">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-<style>
-body{
-	background-image: url(wallpaper.jpg);
-   background-position: center center;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-size: cover;
-   background-color: #464646;
-	 color: white;
-	 text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-}
-@media only screen and (max-width: 767px) {
-  body {
-    background-image: url(wallpaper-mini.jpg);
-  }
-}
-.container{
-	width: 100%;
-}
-a {
-    color: white;
-}
-#name{
-	margin-top: 100px;
-	text-align: center;
-}
-#name > h1{
-	margin: 0;
-	font-size: 5em;
-}
-#bar {
-    width: 40%;
-    margin-top: 0;
-    margin-bottom: 0;
-    border-top: 2px solid #f8f8f8;
-    border-bottom: 2px solid rgba(0,0,0,0.2);
-}
-#intoro{
-	margin-left: 10%;
-}
-#projects{white-space: pre;}
-</style>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script>
-	var data_array;
-	var ig=0;
-	var len=0;
-function hoge(url,id){
-
-$.getJSON("http://repo.chikuwajb.cf/dp/packages/" + url + ".json", function(data) {
-
-      		$('tbody').prepend('<tr><td><a href="http://repo.chikuwajb.cf/dp/?p='+id+'">'+data.name+"</a></td><tr>");
-
-      	});
-}
-	$(document).ready(function(){
-	  //$("#projects").load("http://repo.chikuwajb.cf/dp/list.txt");
-	  $.ajax({
-    url:'http://repo.chikuwajb.cf/dp/list.txt',
-    success: function(data){
-      data_array = data.split(/\r\n|\r|\n/);
-      len = data_array.length;
-	for (var i = 0; i < len-1; i++){
-      	hoge(data_array[i],data_array[i],(len-1)-i);
-
-      }
-    }
-  });
-
-		var i=0;
-		$("#bar,#name > h1").hover(function(){if(i==0){$("#bar").animate({width:"30%"},500,'linear',function(){i=1;});}},function(){if(i==1){$("#bar").animate({width:"40%"},500,'linear',function(){i=0;});}});
-	});
-	</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Hello Chikuwa!</title>
+    <meta name="description" content="Chikuwa's homepage!">
+    <meta name="author" content="@ChikuwaJB_blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="CydiaIcon.png">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
-<div class="container">
-	<div id="name">
-		<h1>Chikuwa</h1>
-		<hr id="bar">
-	 	<h4>iOS Runtime Modification Developer</h4>
-	</div>
-	<div id="intoro">
-		<h1>Cydia Repository</h1>
-		<p>My Cydia repository is <b>http://chikuwajb.github.io/repo/</b> or Tap <b><a href="cydia://url/https://cydia.saurik.com/api/share#?source=http://chikuwajb.github.io/">here!</a></b></p>
-		<h1>About Me</h1>
-		<p>I'm Chikuwa.</p>
-		<p>I'm 14 years old.</p>
-		<p>I live in Japan.</p>
-		<h1>Contact</h1>
-		<p>Mail: chikuwajb 　@　 gmail.com</p>
-		<p>Twitter: <a href="https://twitter.com/ChikuwaJB_Blog/">@ChikuwaJB_Blog</a></p>
-		<p>Github: <a href="https://github.com/ChikuwaJB/">ChikuwaJB</a></p>
-		<h1>Projects List</h1>
-<table class="table">
-    <thead>
-      <tr>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-
-    </tbody>
-    </table>
-</div>
-</div>
+    <div class="loader-w">
+        <div class="loader">
+        </div>
+    </div>
+    
+    <div class="main">
+        <h1>Hello World!</h1>
+        <h2># About me :)</h2>
+        <p>Hello! I am "Chikuwa".</p>
+        <p>I am 14 years old.</p>
+        <p>My birthday is 6/8.</p>
+        <p>I live in Tokyo.</p>
+        <p>I am an engineer.</p>
+        <h2># My skill</h2>
+        <p>/ C / C# / C++ / JavaScript / HTML / CSS / PHP / Objective-C /</p>
+        <h2># Contact</h2>
+        <p>Mail: <a href="mailto:chikuwajb@gmail.com">chikuwajb@gmail.com</a></p>
+        <p>Github: <a href="https://github.com/ChikuwaJB">ChikuwaJB</a></p>
+        <p>Twitter: <a href="https://twitter.com/ChikuwaJB_blog">@ChikuwaJB_blog</a></p>
+    </div>
 </body>
 </html>
